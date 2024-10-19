@@ -143,4 +143,13 @@ mapaMutable["tres"] = 3  // Se puede agregar o modificar un par clave-valor
 println(mapaMutable)  // Output: {uno=1, dos=2, tres=3}
 ```
 
+## 🔹 Arreglos - ARRAY
+Un array en Kotlin es una colección que tiene un tamaño fijo, pero puede cambiar los valores de sus elementos.   
+```kotlin
+val arreglo: Array<Int> = arrayOf(1, 2, 3, 4)
+println(arreglo.joinToString())  // Output: 1, 2, 3, 4
+
+arreglo[0] = 10  // Cambiar el valor en el índice 0
+println(arreglo.joinToString())  // Output: 10, 2, 3, 4
+```
 
