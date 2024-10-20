@@ -585,11 +585,61 @@ cadenaNula?.let {
 >En Kotlin, el bloque de código dentro de let recibe un argumento implícito llamado `it`, que representa el valor no nulo de la variable sobre la cual se está llamando el método let.
 
 
+# 📌 Logger - Uso básico del Log
+Para registrar el flujo del programa en Kotlin se emplea la clase `Log`.     
+      
+**¿Debo instanciar la clase?**     
+No. La clase Log es una clase utilitaria, y todos sus métodos son estáticos. Esto significa que puedes llamar a sus métodos directamente sin tener que crear una instancia de la clase.     
+   
+Los métodos más comunes de registro son:   
+- `Log.d(tag, message)` — Debug: Para mensajes de depuración que pueden ser útiles durante el desarrollo.
+- `Log.i(tag, message)` — Info: Para mensajes informativos.
+- `Log.w(tag, message)` — Warning: Para advertencias, eventos no críticos.
+- `Log.e(tag, message)` — Error: Para mensajes de error.
+- `Log.v(tag, message)` — Verbose: Para mensajes más detallados.
 
+**¿Qué parametros espera el logger?**   
+- `tag`: Es una etiqueta que identifica la clase o componente desde el que se está logueando. Se recomienda usar el nombre de la clase o algo descriptivo.
+- `message`: El mensaje que deseas registrar en el log.
 
+>[!TIP]
+> Es una muy buena idea crear una constante al inicio de la clase que la identifique y usarla como tag en los logs. 
 
+**Ejemplo**
+```kotlin
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 
+class MainActivity : AppCompatActivity() {
 
+    // Declarar TAG como una constante dentro de la clase
+    companion object {
+        private const val TAG = "MainActivity"
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Loguear un mensaje de depuración (debug)
+        Log.d(TAG, "Aplicación iniciada correctamente")
+
+        // Loguear un mensaje informativo (info)
+        Log.i(TAG, "Cargando datos desde el servidor")
+
+        // Loguear una advertencia (warning)
+        Log.w(TAG, "Falta conexión a internet")
+
+        // Loguear un error
+        Log.e(TAG, "Error al cargar los datos")
+
+        // Loguear un mensaje detallado (verbose)
+        Log.v(TAG, "Detalles adicionales para diagnóstico")
+    }
+}
+
+```
 
 
 
