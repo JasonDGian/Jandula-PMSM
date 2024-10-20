@@ -153,7 +153,7 @@ arreglo[0] = 10  // Cambiar el valor en el índice 0
 println(arreglo.joinToString())  // Output: 10, 2, 3, 4
 ```
 
-## 🔹 Declaracion de funciones.
+# 📌 Declaracion de funciones.
 Para declarar funciones en kotlin usamos la palabra clave `fun`.   
 
 >[!CAUTION]
