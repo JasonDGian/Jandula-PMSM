@@ -182,3 +182,374 @@ fun saludar() {
 
 >[!NOTE]
 > En las funciones que no tienen `return` la palabra `unit` es equivalente al `void` de **Java**, pero no es obligatoria.
+
+# 📌 Operadores.
+
+## 🔹 Aritmeticos.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>Suma</td>
+        <td>a + b</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>Resta</td>
+        <td>a - b</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>Multiplicación</td>
+        <td>a * b</td>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>División</td>
+        <td>a / b</td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td>Módulo (resto)</td>
+        <td>a % b</td>
+    </tr>
+</table>
+
+
+## 🔹 Asignación.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>=</td>
+        <td>Asignación simple</td>
+        <td>a = b</td>
+    </tr>
+    <tr>
+        <td>+=</td>
+        <td>Suma y asigna</td>
+        <td>a += b</td>
+    </tr>
+    <tr>
+        <td>-=</td>
+        <td>Resta y asigna</td>
+        <td>a -= b</td>
+    </tr>
+    <tr>
+        <td>*=</td>
+        <td>Multiplica y asigna</td>
+        <td>a *= b</td>
+    </tr>
+    <tr>
+        <td>/=</td>
+        <td>Divide y asigna</td>
+        <td>a /= b</td>
+    </tr>
+    <tr>
+        <td>%=</td>
+        <td>Módulo y asigna</td>
+        <td>a %= b</td>
+    </tr>
+</table>
+
+
+## 🔹 Unarios.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>Operador unario positivo</td>
+        <td>+a</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>Operador unario negativo</td>
+        <td>-a</td>
+    </tr>
+    <tr>
+        <td>++</td>
+        <td>Incremento</td>
+        <td>a++ o ++a</td>
+    </tr>
+    <tr>
+        <td>--</td>
+        <td>Decremento</td>
+        <td>a-- o --a</td>
+    </tr>
+    <tr>
+        <td>!</td>
+        <td>Negación lógica</td>
+        <td>!a</td>
+    </tr>
+</table>
+
+
+## 🔹 Relacionales.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>Igualdad</td>
+        <td>a == b</td>
+    </tr>
+    <tr>
+        <td>!=</td>
+        <td>Desigualdad</td>
+        <td>a != b</td>
+    </tr>
+    <tr>
+        <td>&lt;</td>
+        <td>Menor que</td>
+        <td>a &lt; b</td>
+    </tr>
+    <tr>
+        <td>&gt;</td>
+        <td>Mayor que</td>
+        <td>a &gt; b</td>
+    </tr>
+    <tr>
+        <td>&lt;=</td>
+        <td>Menor o igual que</td>
+        <td>a &lt;= b</td>
+    </tr>
+    <tr>
+        <td>&gt;=</td>
+        <td>Mayor o igual que</td>
+        <td>a &gt;= b</td>
+    </tr>
+</table>
+
+
+## 🔹 Lógicos.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>&&</td>
+        <td>AND lógico (y)</td>
+        <td>a && b</td>
+    </tr>
+    <tr>
+        <td>||</td>
+        <td>OR lógico (o)</td>
+        <td>a || b</td>
+    </tr>
+    <tr>
+        <td>!</td>
+        <td>NOT lógico (negación)</td>
+        <td>!a</td>
+    </tr>
+</table>
+
+
+## 🔹 De comparación especiales.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>===</td>
+        <td>Igualdad referencial (misma instancia)</td>
+        <td>a === b</td>
+    </tr>
+    <tr>
+        <td>!==</td>
+        <td>Desigualdad referencial</td>
+        <td>a !== b</td>
+    </tr>
+    <tr>
+        <td>is</td>
+        <td>Verificar tipo</td>
+        <td>a is String</td>
+    </tr>
+    <tr>
+        <td>!is</td>
+        <td>Verificar tipo negativo</td>
+        <td>a !is String</td>
+    </tr>
+</table>
+
+## 🔹 De rango.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>..</td>
+        <td>Crea un rango</td>
+        <td>a..b</td>
+    </tr>
+    <tr>
+        <td>in</td>
+        <td>Comprueba si un valor está en un rango</td>
+        <td>x in a..b</td>
+    </tr>
+    <tr>
+        <td>!in</td>
+        <td>Comprueba si un valor no está en un rango</td>
+        <td>x !in a..b</td>
+    </tr>
+</table>
+
+## 🔹 De Indexación.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>[]</td>
+        <td>Indexación (obtener valor)</td>
+        <td>a[i]</td>
+    </tr>
+    <tr>
+        <td>[] =</td>
+        <td>Indexación (asignar valor)</td>
+        <td>a[i] = valor</td>
+    </tr>
+</table>
+
+
+## 🔹 De invocación de funciones.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>()</td>
+        <td>Invocación de función</td>
+        <td>funcion()</td>
+    </tr>
+</table>
+
+
+## 🔹 De sobrecarga.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Función correspondiente</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>plus()</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>minus()</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>times()</td>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>div()</td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td>mod()</td>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>equals()</td>
+    </tr>
+</table>
+
+## 🔹 De bit a bit.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>shl</td>
+        <td>Desplazamiento a la izquierda</td>
+        <td>a shl b</td>
+    </tr>
+    <tr>
+        <td>shr</td>
+        <td>Desplazamiento a la derecha</td>
+        <td>a shr b</td>
+    </tr>
+    <tr>
+        <td>ushr</td>
+        <td>Desplazamiento a la derecha sin signo</td>
+        <td>a ushr b</td>
+    </tr>
+    <tr>
+        <td>and</td>
+        <td>AND bit a bit</td>
+        <td>a and b</td>
+    </tr>
+    <tr>
+        <td>or</td>
+        <td>OR bit a bit</td>
+        <td>a or b</td>
+    </tr>
+    <tr>
+        <td>xor</td>
+        <td>XOR bit a bit</td>
+        <td>a xor b</td>
+    </tr>
+    <tr>
+        <td>inv</td>
+        <td>Inversión de bits</td>
+        <td>a.inv()</td>
+    </tr>
+</table>
+
+
+## 🔹 Operadores de Elvis y de coalescencia Nula.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>?:</td>
+        <td>Operador Elvis (valor por defecto si es nulo)</td>
+        <td>a ?: b</td>
+    </tr>
+</table>
+
+<!-- Operador de Llamada Segura -->
+<h2>13. Operador de Llamada Segura (?.)</h2>
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>?.</td>
+        <td>Llamada segura (no lanza excepción si es nulo)</td>
+        <td>a?.metodo()</td>
+    </tr>
+</table>
