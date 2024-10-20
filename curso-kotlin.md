@@ -648,11 +648,12 @@ class MainActivity : AppCompatActivity() {
 ```
 
 # 📌 Añadir librerias al adicionales proyecto.
-Para añadir librerias adicionales a nuestro proyecto debemos de crear una entrada de importación en el fichero '**build.gradle**' en el bloque **dependencies{}**.   
-Con la vista en modo 'Android',dentro 'Gradle Scripts' abrimos el fichero `build.gradle.kts` del modulo APP.   
+Para añadir librerias adicionales a nuestro proyecto debemos de crear una entrada de importación en el fichero '**build.gradle**' en el bloque **dependencies{}**.    
+   
+Con la vista en modo 'Android',dentro 'Gradle Scripts' abrimos el fichero `build.gradle.kts` del modulo APP.    
 ![imagen](https://github.com/user-attachments/assets/edd3986c-19a9-4a05-a5fe-536f545cf349)
-
-Una vez abierto buscamos la sección de dependencias y ahi introducimos nuestra nueva libreria.
+    
+Una vez abierto buscamos la sección de dependencias y ahi introducimos nuestra nueva libreria.   
 ```kts
 dependencies {
     // Introducir dependencias aqui.
@@ -668,7 +669,8 @@ dependencies {
 }
 ```
 
-Tras esto pinchamos en **`Sync Now`** para confirmar los cambios y hacer que tomen efecto.    
+Tras esto pinchamos en **`Sync Now`** para confirmar los cambios y hacer que tomen efecto.     
+   
 ![imagen](https://github.com/user-attachments/assets/ff2ac152-ab5e-424c-8606-71b7f67d29ec)
 
 
