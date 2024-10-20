@@ -153,3 +153,32 @@ arreglo[0] = 10  // Cambiar el valor en el índice 0
 println(arreglo.joinToString())  // Output: 10, 2, 3, 4
 ```
 
+## 🔹 Declaracion de funciones.
+Para declarar funciones en kotlin usamos la palabra clave `fun`.   
+
+>[!CAUTION]
+> **Importante:** El tipo de retorno se coloca después de los parámetros de la función.
+
+**Función CON retorno**
+```kotlin
+fun nombreFuncion(parametro1: Tipo, parametro2: Tipo): TipoDeRetorno {
+    // Cuerpo de la función
+    return valorDeRetorno
+}
+```
+   
+**Función SIN retorno**    
+Para codificar funciones sin valor de retorno podemos explicitar que no devuelven nada mediante la palabra reservada `Unit` o sencillamente no explicitar retorno.
+```kotlin
+// La función 
+fun saludar(): Unit {
+    println("¡Hola!")
+}
+// Es equivalente a 
+fun saludar() {
+    println("¡Hola!")
+}
+```
+
+>[!NOTE]
+> En las funciones que no tienen `return` la palabra `unit` es equivalente al `void` de **Java**, pero no es obligatoria.
