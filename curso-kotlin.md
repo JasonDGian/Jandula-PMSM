@@ -159,7 +159,7 @@ Para declarar funciones en kotlin usamos la palabra clave `fun`.
 >[!CAUTION]
 > **Importante:** El tipo de retorno se coloca después de los parámetros de la función.
 
-**Función CON retorno**
+## 🔹 Función con retorno
 ```kotlin
 fun nombreFuncion(parametro1: Tipo, parametro2: Tipo): TipoDeRetorno {
     // Cuerpo de la función
@@ -167,7 +167,7 @@ fun nombreFuncion(parametro1: Tipo, parametro2: Tipo): TipoDeRetorno {
 }
 ```
    
-**Función SIN retorno**    
+## 🔹 Función sin retorno
 Para codificar funciones sin valor de retorno podemos explicitar que no devuelven nada mediante la palabra reservada `Unit` o sencillamente no explicitar retorno.
 ```kotlin
 // La función 
