@@ -565,3 +565,39 @@ Se utiliza para realizar una operación solo si un objeto no es nulo.
         <td>a?.metodo()</td>
     </tr>
 </table>
+
+**Ejemplo**   
+```kotlin
+// Declaramos variable que puede o no ser nula. 
+// El signo "?" va después del tipo para indicar posibilidad de null.
+var cadenaNula: String? = null
+
+// Invocación a ejecución condicional.
+cadenaNula?.let {
+    // Bloque que se ejecutará solo si la variable NO ES nula.
+    println("La cadena no es nula: $it")
+} ?: run {
+    // Bloque que se ejecutará solo si la variable ES nula.
+    println("La cadena es nula.")
+}
+```
+>[!NOTE]
+>En Kotlin, el bloque de código dentro de let recibe un argumento implícito llamado `it`, que representa el valor no nulo de la variable sobre la cual se está llamando el método let.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
