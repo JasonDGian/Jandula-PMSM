@@ -17,6 +17,12 @@ Para comentar la linea en la que se ubica el cursor usamos `CTRL` + `/`. De no e
 ![image](https://github.com/user-attachments/assets/214a2494-4345-431b-92aa-6905866e97af)
       
 ![image](https://github.com/user-attachments/assets/a3e26fdb-f8e6-4062-bf2b-ad612dace1be)
+    
+---
+    
+
+
+
 
 
 
@@ -152,4 +158,525 @@ println(arreglo.joinToString())  // Output: 1, 2, 3, 4
 arreglo[0] = 10  // Cambiar el valor en el índice 0
 println(arreglo.joinToString())  // Output: 10, 2, 3, 4
 ```
+
+# 📌 Declaracion de funciones.
+Para declarar funciones en kotlin usamos la palabra clave `fun`.   
+
+>[!CAUTION]
+> **Importante:** El tipo de retorno se coloca después de los parámetros de la función.
+
+## 🔹 Función con retorno
+```kotlin
+fun nombreFuncion(parametro1: Tipo, parametro2: Tipo): TipoDeRetorno {
+    // Cuerpo de la función
+    return valorDeRetorno
+}
+```
+   
+## 🔹 Función sin retorno
+Para codificar funciones sin valor de retorno podemos explicitar que no devuelven nada mediante la palabra reservada `Unit` o sencillamente no explicitar retorno.
+```kotlin
+// La función 
+fun saludar(): Unit {
+    println("¡Hola!")
+}
+// Es equivalente a 
+fun saludar() {
+    println("¡Hola!")
+}
+```
+
+>[!NOTE]
+> En las funciones que no tienen `return` la palabra `unit` es equivalente al `void` de **Java**, pero no es obligatoria.
+
+# 📌 Operadores.
+
+## 🔹 Aritmeticos.
+Estos operadores se usan para realizar operaciones matemáticas básicas.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>Suma</td>
+        <td>a + b</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>Resta</td>
+        <td>a - b</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>Multiplicación</td>
+        <td>a * b</td>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>División</td>
+        <td>a / b</td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td>Módulo (resto)</td>
+        <td>a % b</td>
+    </tr>
+</table>
+
+
+## 🔹 Asignación.
+Se utilizan para asignar valores a las variables.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>=</td>
+        <td>Asignación simple</td>
+        <td>a = b</td>
+    </tr>
+    <tr>
+        <td>+=</td>
+        <td>Suma y asigna</td>
+        <td>a += b</td>
+    </tr>
+    <tr>
+        <td>-=</td>
+        <td>Resta y asigna</td>
+        <td>a -= b</td>
+    </tr>
+    <tr>
+        <td>*=</td>
+        <td>Multiplica y asigna</td>
+        <td>a *= b</td>
+    </tr>
+    <tr>
+        <td>/=</td>
+        <td>Divide y asigna</td>
+        <td>a /= b</td>
+    </tr>
+    <tr>
+        <td>%=</td>
+        <td>Módulo y asigna</td>
+        <td>a %= b</td>
+    </tr>
+</table>
+
+
+## 🔹 Unarios.
+Son operadores que actúan sobre un solo operando.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>Operador unario positivo</td>
+        <td>+a</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>Operador unario negativo</td>
+        <td>-a</td>
+    </tr>
+    <tr>
+        <td>++</td>
+        <td>Incremento</td>
+        <td>a++ o ++a</td>
+    </tr>
+    <tr>
+        <td>--</td>
+        <td>Decremento</td>
+        <td>a-- o --a</td>
+    </tr>
+    <tr>
+        <td>!</td>
+        <td>Negación lógica</td>
+        <td>!a</td>
+    </tr>
+</table>
+
+
+## 🔹 Relacionales (de comparación).
+Se usan para comparar valores y devuelven un valor booleano (true o false).
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>Igualdad</td>
+        <td>a == b</td>
+    </tr>
+    <tr>
+        <td>!=</td>
+        <td>Desigualdad</td>
+        <td>a != b</td>
+    </tr>
+    <tr>
+        <td>&lt;</td>
+        <td>Menor que</td>
+        <td>a &lt; b</td>
+    </tr>
+    <tr>
+        <td>&gt;</td>
+        <td>Mayor que</td>
+        <td>a &gt; b</td>
+    </tr>
+    <tr>
+        <td>&lt;=</td>
+        <td>Menor o igual que</td>
+        <td>a &lt;= b</td>
+    </tr>
+    <tr>
+        <td>&gt;=</td>
+        <td>Mayor o igual que</td>
+        <td>a &gt;= b</td>
+    </tr>
+</table>
+
+
+## 🔹 Lógicos.
+Se usan para operaciones lógicas y combinan expresiones booleanas.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>&&</td>
+        <td>AND lógico (y)</td>
+        <td>a && b</td>
+    </tr>
+    <tr>
+        <td>||</td>
+        <td>OR lógico (o)</td>
+        <td>a || b</td>
+    </tr>
+    <tr>
+        <td>!</td>
+        <td>NOT lógico (negación)</td>
+        <td>!a</td>
+    </tr>
+</table>
+
+
+## 🔹 De comparación especiales.
+Estos operadores permiten la comparación de referencias de objetos y la verificación de tipos.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>===</td>
+        <td>Igualdad referencial (misma instancia)</td>
+        <td>a === b</td>
+    </tr>
+    <tr>
+        <td>!==</td>
+        <td>Desigualdad referencial</td>
+        <td>a !== b</td>
+    </tr>
+    <tr>
+        <td>is</td>
+        <td>Verificar tipo</td>
+        <td>a is String</td>
+    </tr>
+    <tr>
+        <td>!is</td>
+        <td>Verificar tipo negativo</td>
+        <td>a !is String</td>
+    </tr>
+</table>
+
+## 🔹 De rango.
+Se utilizan para trabajar con rangos de valores.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>..</td>
+        <td>Crea un rango</td>
+        <td>a..b</td>
+    </tr>
+    <tr>
+        <td>in</td>
+        <td>Comprueba si un valor está en un rango</td>
+        <td>x in a..b</td>
+    </tr>
+    <tr>
+        <td>!in</td>
+        <td>Comprueba si un valor no está en un rango</td>
+        <td>x !in a..b</td>
+    </tr>
+</table>
+
+## 🔹 De Indexación.
+Se usan para acceder o modificar elementos en estructuras como listas o arrays.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>[]</td>
+        <td>Indexación (obtener valor)</td>
+        <td>a[i]</td>
+    </tr>
+    <tr>
+        <td>[] =</td>
+        <td>Indexación (asignar valor)</td>
+        <td>a[i] = valor</td>
+    </tr>
+</table>
+
+
+## 🔹 De invocación de funciones.
+Se usan para invocar funciones.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>()</td>
+        <td>Invocación de función</td>
+        <td>funcion()</td>
+    </tr>
+</table>
+
+
+## 🔹 De sobrecarga.
+En Kotlin, muchos de los operadores pueden ser sobrecargados al implementar funciones específicas en tus clases. 
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Función correspondiente</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>plus()</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>minus()</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>times()</td>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>div()</td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td>mod()</td>
+    </tr>
+    <tr>
+        <td>==</td>
+        <td>equals()</td>
+    </tr>
+</table>
+
+## 🔹 De bit a bit.
+Estos operadores se usan para realizar operaciones a nivel de bits en números enteros.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>shl</td>
+        <td>Desplazamiento a la izquierda</td>
+        <td>a shl b</td>
+    </tr>
+    <tr>
+        <td>shr</td>
+        <td>Desplazamiento a la derecha</td>
+        <td>a shr b</td>
+    </tr>
+    <tr>
+        <td>ushr</td>
+        <td>Desplazamiento a la derecha sin signo</td>
+        <td>a ushr b</td>
+    </tr>
+    <tr>
+        <td>and</td>
+        <td>AND bit a bit</td>
+        <td>a and b</td>
+    </tr>
+    <tr>
+        <td>or</td>
+        <td>OR bit a bit</td>
+        <td>a or b</td>
+    </tr>
+    <tr>
+        <td>xor</td>
+        <td>XOR bit a bit</td>
+        <td>a xor b</td>
+    </tr>
+    <tr>
+        <td>inv</td>
+        <td>Inversión de bits</td>
+        <td>a.inv()</td>
+    </tr>
+</table>
+
+
+## 🔹 Operadores de Elvis y de coalescencia Nula.
+Estos operadores se utilizan para manejar valores nulos.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>?:</td>
+        <td>Operador Elvis (valor por defecto si es nulo)</td>
+        <td>a ?: b</td>
+    </tr>
+</table>
+
+## 🔹 Operadores de Llamada Segura
+Se utiliza para realizar una operación solo si un objeto no es nulo.
+<table border="1">
+    <tr>
+        <th>Operador</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+    <tr>
+        <td>?.</td>
+        <td>Llamada segura (no lanza excepción si es nulo)</td>
+        <td>a?.metodo()</td>
+    </tr>
+</table>
+
+**Ejemplo**   
+```kotlin
+// Declaramos variable que puede o no ser nula. 
+// El signo "?" va después del tipo para indicar posibilidad de null.
+var cadenaNula: String? = null
+
+// Invocación a ejecución condicional.
+cadenaNula?.let {
+    // Bloque que se ejecutará solo si la variable NO ES nula.
+    println("La cadena no es nula: $it")
+} ?: run {
+    // Bloque que se ejecutará solo si la variable ES nula.
+    println("La cadena es nula.")
+}
+```
+>[!NOTE]
+>En Kotlin, el bloque de código dentro de let recibe un argumento implícito llamado `it`, que representa el valor no nulo de la variable sobre la cual se está llamando el método let.
+
+
+# 📌 Logger - Uso básico del Log
+Para registrar el flujo del programa en Kotlin se emplea la clase `Log`.     
+      
+**¿Debo instanciar la clase?**     
+No. La clase Log es una clase utilitaria, y todos sus métodos son estáticos. Esto significa que puedes llamar a sus métodos directamente sin tener que crear una instancia de la clase.     
+   
+Los métodos más comunes de registro son:   
+- `Log.d(tag, message)` — Debug: Para mensajes de depuración que pueden ser útiles durante el desarrollo.
+- `Log.i(tag, message)` — Info: Para mensajes informativos.
+- `Log.w(tag, message)` — Warning: Para advertencias, eventos no críticos.
+- `Log.e(tag, message)` — Error: Para mensajes de error.
+- `Log.v(tag, message)` — Verbose: Para mensajes más detallados.
+
+**¿Qué parametros espera el logger?**   
+- `tag`: Es una etiqueta que identifica la clase o componente desde el que se está logueando. Se recomienda usar el nombre de la clase o algo descriptivo.
+- `message`: El mensaje que deseas registrar en el log.
+
+>[!TIP]
+> Es una muy buena idea crear una constante al inicio de la clase que la identifique y usarla como tag en los logs. 
+
+**Ejemplo**
+```kotlin
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    // Declarar TAG como una constante dentro de la clase
+    companion object {
+        private const val TAG = "MainActivity"
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Loguear un mensaje de depuración (debug)
+        Log.d(TAG, "Aplicación iniciada correctamente")
+
+        // Loguear un mensaje informativo (info)
+        Log.i(TAG, "Cargando datos desde el servidor")
+
+        // Loguear una advertencia (warning)
+        Log.w(TAG, "Falta conexión a internet")
+
+        // Loguear un error
+        Log.e(TAG, "Error al cargar los datos")
+
+        // Loguear un mensaje detallado (verbose)
+        Log.v(TAG, "Detalles adicionales para diagnóstico")
+    }
+}
+
+```
+
+# 📌 Añadir librerias al adicionales proyecto.
+Para añadir librerias adicionales a nuestro proyecto debemos de crear una entrada de importación en el fichero '**build.gradle**' en el bloque **dependencies{}**.    
+   
+Con la vista en modo 'Android',dentro 'Gradle Scripts' abrimos el fichero `build.gradle.kts` del modulo APP.    
+![imagen](https://github.com/user-attachments/assets/edd3986c-19a9-4a05-a5fe-536f545cf349)
+    
+Una vez abierto buscamos la sección de dependencias y ahi introducimos nuestra nueva libreria.   
+```kts
+dependencies {
+    // Introducir dependencias aqui.
+    implementation 'libreria:version'
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+}
+```
+
+Tras esto pinchamos en **`Sync Now`** para confirmar los cambios y hacer que tomen efecto.     
+   
+![imagen](https://github.com/user-attachments/assets/ff2ac152-ab5e-424c-8606-71b7f67d29ec)
+
+
+
+
+
+
+
 
