@@ -8,6 +8,7 @@ import android.view.MotionEvent
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -84,14 +85,35 @@ class MainActivity : AppCompatActivity() {
         }
 
         val texto4 = findViewById<TextView>(R.id.tvTexto4)
+        val yl = ContextCompat.getColor(this, R.color.yellow)
+        val bl = ContextCompat.getColor(this, R.color.blue)
 
         texto4.setOnTouchListener { view, motionEvent ->
-            if ( motionEvent.action == MotionEvent.ACTION_BUTTON_PRESS ){
-                Log.d("Funcion Touch", "Toque detectado")
-                true
+            when (motionEvent.action) {
+                MotionEvent.ACTION_UP -> {
+                    Log.d("TouchListener", "Action up")
+                    texto4.setText("Touched Up")
+                    texto4.setBackgroundColor(bl)
+                    texto4.setTextColor(yl)
+                    true // Indicates the event was handled
+                }
+
+                MotionEvent.ACTION_DOWN -> {
+                    Log.d("TouchListener", "Action Down") // Use lowercase 'd'
+                    texto4.setText("Touched Down")
+                    texto4.setBackgroundColor(yl)
+                    texto4.setTextColor(bl)
+                    true // Indicates the event was handled
+                }
+
+                else -> false // Allow other events to be handled
             }
-            else {false}
         }
+
+
+
+
+
 
 
 
