@@ -186,6 +186,7 @@ fun saludar() {
 # 📌 Operadores.
 
 ## 🔹 Aritmeticos.
+Estos operadores se usan para realizar operaciones matemáticas básicas.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -221,6 +222,7 @@ fun saludar() {
 
 
 ## 🔹 Asignación.
+Se utilizan para asignar valores a las variables.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -261,6 +263,7 @@ fun saludar() {
 
 
 ## 🔹 Unarios.
+Son operadores que actúan sobre un solo operando.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -295,7 +298,8 @@ fun saludar() {
 </table>
 
 
-## 🔹 Relacionales.
+## 🔹 Relacionales (de comparación).
+Se usan para comparar valores y devuelven un valor booleano (true o false).
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -336,6 +340,7 @@ fun saludar() {
 
 
 ## 🔹 Lógicos.
+Se usan para operaciones lógicas y combinan expresiones booleanas.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -361,6 +366,7 @@ fun saludar() {
 
 
 ## 🔹 De comparación especiales.
+Estos operadores permiten la comparación de referencias de objetos y la verificación de tipos.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -390,6 +396,7 @@ fun saludar() {
 </table>
 
 ## 🔹 De rango.
+Se utilizan para trabajar con rangos de valores.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -414,6 +421,7 @@ fun saludar() {
 </table>
 
 ## 🔹 De Indexación.
+Se usan para acceder o modificar elementos en estructuras como listas o arrays.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -434,6 +442,7 @@ fun saludar() {
 
 
 ## 🔹 De invocación de funciones.
+Se usan para invocar funciones.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -449,6 +458,7 @@ fun saludar() {
 
 
 ## 🔹 De sobrecarga.
+En Kotlin, muchos de los operadores pueden ser sobrecargados al implementar funciones específicas en tus clases. 
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -481,6 +491,7 @@ fun saludar() {
 </table>
 
 ## 🔹 De bit a bit.
+Estos operadores se usan para realizar operaciones a nivel de bits en números enteros.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -526,6 +537,7 @@ fun saludar() {
 
 
 ## 🔹 Operadores de Elvis y de coalescencia Nula.
+Estos operadores se utilizan para manejar valores nulos.
 <table border="1">
     <tr>
         <th>Operador</th>
@@ -539,8 +551,8 @@ fun saludar() {
     </tr>
 </table>
 
-<!-- Operador de Llamada Segura -->
-<h2>13. Operador de Llamada Segura (?.)</h2>
+## 🔹 Operadores de Llamada Segura
+Se utiliza para realizar una operación solo si un objeto no es nulo.
 <table border="1">
     <tr>
         <th>Operador</th>
