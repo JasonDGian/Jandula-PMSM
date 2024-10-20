@@ -17,6 +17,12 @@ Para comentar la linea en la que se ubica el cursor usamos `CTRL` + `/`. De no e
 ![image](https://github.com/user-attachments/assets/214a2494-4345-431b-92aa-6905866e97af)
       
 ![image](https://github.com/user-attachments/assets/a3e26fdb-f8e6-4062-bf2b-ad612dace1be)
+    
+---
+    
+
+
+
 
 
 
@@ -641,8 +647,29 @@ class MainActivity : AppCompatActivity() {
 
 ```
 
+# 📌 Añadir librerias al adicionales proyecto.
+Para añadir librerias adicionales a nuestro proyecto debemos de crear una entrada de importación en el fichero '**build.gradle**' en el bloque **dependencies{}**.   
+Con la vista en modo 'Android',dentro 'Gradle Scripts' abrimos el fichero `build.gradle.kts` del modulo APP.   
+![imagen](https://github.com/user-attachments/assets/edd3986c-19a9-4a05-a5fe-536f545cf349)
 
+Una vez abierto buscamos la sección de dependencias y ahi introducimos nuestra nueva libreria.
+```kts
+dependencies {
+    // Introducir dependencias aqui.
+    implementation 'libreria:version'
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+}
+```
 
+Tras esto pinchamos en **`Sync Now`** para confirmar los cambios y hacer que tomen efecto.    
+![imagen](https://github.com/user-attachments/assets/ff2ac152-ab5e-424c-8606-71b7f67d29ec)
 
 
 
