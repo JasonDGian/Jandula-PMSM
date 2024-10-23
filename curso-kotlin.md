@@ -685,4 +685,14 @@ Para usar un spinner debemos seguir los siguientes pasos.
 
 ![imagen](https://github.com/user-attachments/assets/f4b2ffb6-3724-4586-b14d-b37d1e6d629e)
 
+```kotlin
+        //localizamos el elemento.
+        val spinnerSemanas = findViewById<Spinner>(R.id.spinner_dias)
+
+        //Iterable con elementos para spinner.
+        val diasSemanales = arrayOf("Lunes", "Martes", "Miercoles", "Jueves","Viernes", "Sabado", "Domingo")
+
+        // alimentamos el adaptador del spinner concretando tipo e iterable.
+        spinnerSemanas.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, diasSemanales)
+```
 
