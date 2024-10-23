@@ -675,8 +675,14 @@ Tras esto pinchamos en **`Sync Now`** para confirmar los cambios y hacer que tom
 
 
 
+# 📌 Uso del Spinner.
+Para usar un spinner debemos seguir los siguientes pasos.
 
+1. Definir el Spinner en el archivo XML.
+2. Crear un array de datos que vas a mostrar en el Spinner.
+3. Crear un adaptador (ArrayAdapter) para conectar los datos al Spinner.
+4. Asignar el adaptador al Spinner en tu código Kotlin.
 
-
+![imagen](https://github.com/user-attachments/assets/f4b2ffb6-3724-4586-b14d-b37d1e6d629e)
 
 
