@@ -696,3 +696,116 @@ Para usar un spinner debemos seguir los siguientes pasos.
         spinnerSemanas.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_activated_1, diasSemanales)
 ```
 
+# 📌 Uso del Autocomplete text view.
+Al igual que en el Spinner este elemento se alimenta con una lista o un iterable mediante un adapter.
+1. Definir el Auto Complete Text View en el archivo XML.
+2. Crear un array de datos que vas a mostrar en el Autocomplete.
+3. Crear un adaptador (ArrayAdapter) para conectar los datos.
+4. Asignar el adaptador al Autocomplete en tu código Kotlin.
+
+
+
+![imagen](https://github.com/user-attachments/assets/71cfce2b-1fb7-4509-885e-ee47fe4b3f40)
+
+
+# 📌 Botones radio.
+Los botones radio se agrupan en un "Radio group" que los contiene.
+
+
+```kotlin
+    <RadioGroup
+        android:id="@+id/rg_grupoRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        
+    <RadioButton
+        android:id="@+id/radioLunes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lunes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <RadioButton
+        android:id="@+id/radioMartes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Martes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <RadioButton
+        android:id="@+id/radioMiercoles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miercoles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <RadioButton
+        android:id="@+id/radioJueves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jueves"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <RadioButton
+        android:id="@+id/radioViernes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Viernes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <RadioButton
+        android:id="@+id/radioSabado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sabado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <RadioButton
+        android:id="@+id/radioDomingo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domingo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    </RadioGroup>
+```
